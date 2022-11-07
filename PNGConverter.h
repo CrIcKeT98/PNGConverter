@@ -1,18 +1,22 @@
 #pragma once
 #include <Windows.h>
+#include <iostream>
 #include <string>
-
-std::wstring s2ws(const std::string& str); //string to wide string 
-LRESULT CALLBACK WndProc(HWND window, UINT message, WPARAM wParam, LPARAM lParam);
-bool checkDirectory(LPCSTR folderpath);
 
 class PNGConverter
 {
-public:
-	PNGConverter(HINSTANCE instance, LPSTR dir);
-
 private:
-	HANDLE m_hDir;
-	std::wstring m_monitoringFolder;
+	//static NOTIFYICONDATA Icon;
+	//std::wstring monitoringFolder;
+	//HANDLE hDir;
+
+	WNDCLASSEX main = { 0 };
+	
+
+public:
+	PNGConverter(HINSTANCE instance, HINSTANCE WinApiMessage, LPSTR dir);
+	HANDLE hDir;
+	std::wstring monitoringFolder;
+	std::wstring s2ws(const std::string& str);
 };
 
