@@ -1,0 +1,11 @@
+# This file is used to ignore files which are generated
+# ----------------------------------------------------------------------------
+
+/backup
+/Debug
+/Release
+/x64
+*.rar
+*.vcxproj
+*.filters
+*.user
